@@ -1,12 +1,16 @@
 {
-  "name": "Getting Started Example",
+  "name": "SSL Warning Enhancer",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "enhances an SSL warning with more information",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
-  "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
+  "permissions": ["tabs","activeTab", "declarativeContent", "storage", "<all_urls>"],
+  "web_accessible_resources":[
+    "styles/*",
+    "testPage.html"
+  ],
   "browser_action": {
     "name": "Click to get $$$",
     "default_icon": {
