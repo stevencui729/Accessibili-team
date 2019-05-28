@@ -9,7 +9,8 @@
   "permissions": ["tabs","activeTab", "declarativeContent", "storage", "<all_urls>"],
   "web_accessible_resources":[
     "styles/*",
-    "testPage.html"
+    "testPage.html",
+    "ssl/*"
   ],
   "browser_action": {
     "name": "Click to get $$$",
