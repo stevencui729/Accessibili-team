@@ -5,20 +5,20 @@ var synth = window.speechSynthesis;
 
 
 function speak(text){
-    if (synth.speaking) {
-        console.error('speechSynthesis.speaking');
-        return;
-    }
-    let  utterThis = new SpeechSynthesisUtterance(text);
-    utterThis.onend = function (event) {
-        console.log('SpeechSynthesisUtterance.onend');
-    }
-    utterThis.onerror = function (event) {
-        console.error('SpeechSynthesisUtterance.onerror');
-    }
-    //utterThis.pitch = 1;
-    //utterThis.rate = 1;
-    synth.speak(utterThis);
+  if (synth.speaking) {
+      console.error('speechSynthesis.speaking');
+      return;
+  }
+  let  utterThis = new SpeechSynthesisUtterance(text);
+  utterThis.onend = function (event) {
+      console.log('SpeechSynthesisUtterance.onend');
+  }
+  utterThis.onerror = function (event) {
+      console.error('SpeechSynthesisUtterance.onerror');
+  }
+  //utterThis.pitch = 1;
+  //utterThis.rate = 1;
+  synth.speak(utterThis);
 }
 
 onsubmit = function(event) {
