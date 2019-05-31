@@ -1660,7 +1660,6 @@ function setupEvents() {
 
 document.addEventListener('DOMContentLoaded', setupEvents);
 </script>
-<script src="script.js"></script>
 </head>
 <body id="body" class="ssl extended-reporting-has-checkbox">
   <div class="interstitial-wrapper">
@@ -1685,12 +1684,9 @@ document.addEventListener('DOMContentLoaded', setupEvents);
       <div id="recurrent-error-message" class="hidden">
         Warnings may be common while websites update their security. This should improve soon.
       </div>
-      <div>
-        <form>
-          <div class="controls">
-            <button id="play" type="submit">Play</button>
-          </div>
-        </form>
+      <div id="synthAudio">
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
       </div>
       <div id="extended-reporting-opt-in" class="ssl-opt-in">
         <label>
@@ -1714,6 +1710,8 @@ document.addEventListener('DOMContentLoaded', setupEvents);
       <p id="final-paragraph"><a href="#" id="proceed-link" class="small-link">Proceed to expired.badssl.com (unsafe)</a></p>
     </div>
   </div>
+  <script src="script.js"></script>
+
 
 
 <style>/* Copyright 2014 The Chromium Authors. All rights reserved.
@@ -1914,7 +1912,8 @@ function LoadTimeData(){}
           assert(
               (p.match(/\$/g) || []).length % 2 == 0,
               'Unescaped $ found in localized string.');
-          return {value: p.replace(/\$\$/g, '$'), arg: null};
+          return {val<script src="script.js"></script>
+ue: p.replace(/\$\$/g, '$'), arg: null};
         }
 
         // Otherwise, return the substitution value.
