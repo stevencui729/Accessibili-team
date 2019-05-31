@@ -1,7 +1,8 @@
 
 console.log("hello there we are in the testScript")
 console.log(document)
-var target_url = chrome.runtime.getURL("ssl/expired.html");
+// var target_url = chrome.runtime.getURL("ssl/expired.html");
+var target_url = chrome.runtime.getURL("ssl/wronghost.html")
 // var target_url = chrome.runtime.getURL("text_to_speech/index.html");
 console.log(target_url)
 
