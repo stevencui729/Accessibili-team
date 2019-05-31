@@ -331,6 +331,10 @@ input[type=checkbox]:checked ~ .checkbox::before {
   .nav-wrapper {
     margin-top: 30px;
   }
+
+  .audio-button {
+
+  }
 }
 
 /**
@@ -1684,19 +1688,25 @@ document.addEventListener('DOMContentLoaded', setupEvents);
       <div id="recurrent-error-message" class="hidden">
         Warnings may be common while websites update their security. This should improve soon.
       </div>
-      <div id="synthAudio">
-        <button id="playButton">Play</button>
-        <button id="pauseButton">Pause</button>
+      <div style="width:100%;margin:0;height:100px;">
+        <div id="synthAudio" style="width:50%;min-width:425px;">
+          <button id="playButton" class="audio-button secondary-button" style="width:190px;margin-right:10px; margin-top:20px; margin-bottom:20px; float:left;background: #CDCDCD; border: 1px solid var(--google-gray-500);color: var(--google-gray-700)">Play</button>
+          <button id="pauseButton" class="audio-button" style="width:190px; margin:20px; float:left;background: #CDCDCD; border: 1px solid var(--google-gray-500);color: var(--google-gray-700);">Pause</button>
+        </div>
       </div>
-      <div id="extended-reporting-opt-in" class="ssl-opt-in">
-        <label>
-          <div class="checkboxes">
-            <input type="checkbox" id="opt-in-checkbox">
-            <span class="checkbox"></span>
-          </div>
-          <span id="opt-in-label">Help improve Safe Browsing by sending some <a href="#" id="whitepaper-link">system information and page content</a> to Google. <a id="privacy-link" href="#" onclick="sendCommand(10); return false;" onmousedown="return false;">Privacy policy</a></span>
-        </label>
+      <div style="width:100%">
+        <div id="extended-reporting-opt-in" class="ssl-opt-in">
+          <label>
+            <div class="checkboxes">
+              <input type="checkbox" id="opt-in-checkbox">
+              <span class="checkbox"></span>
+            </div>
+            <span id="opt-in-label">Help improve Safe Browsing by sending some <a href="#" id="whitepaper-link">system information and page content</a> to Google. <a id="privacy-link" href="#" onclick="sendCommand(10); return false;" onmousedown="return false;">Privacy policy</a></span>
+          </label>
+        </div>
       </div>
+
+
     </div>
     <div class="nav-wrapper">
       <button id="primary-button">Back to safety</button>
@@ -1736,19 +1746,21 @@ html {
   direction: ltr;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  font-size: 75%;
-}
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 75%;
+  }
 /*Celine Kim*/
-#url{
+  #url{
     font-size: 1.5em;
     color: #b40b02;
   }
 button {
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
-</style><script>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
+</style>
+
+<script>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
