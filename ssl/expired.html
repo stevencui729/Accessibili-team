@@ -1912,8 +1912,7 @@ function LoadTimeData(){}
           assert(
               (p.match(/\$/g) || []).length % 2 == 0,
               'Unescaped $ found in localized string.');
-          return {val<script src="script.js"></script>
-ue: p.replace(/\$\$/g, '$'), arg: null};
+          return {value: p.replace(/\$\$/g, '$'), arg: null};
         }
 
         // Otherwise, return the substitution value.
