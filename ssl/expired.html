@@ -681,7 +681,7 @@ body.safe-browsing {
 }
 
 </style>
-  <script>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
+<script>// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -1501,6 +1501,7 @@ function appendDebuggingField(title, value, fixedWidth) {
 }
 
 function toggleDebuggingInfo() {
+  console.log("in toggleDebuggingInfo")
   $('error-debugging-info').classList.toggle(HIDDEN_CLASS);
 }
 
@@ -1924,8 +1925,7 @@ function LoadTimeData(){}
           assert(
               (p.match(/\$/g) || []).length % 2 == 0,
               'Unescaped $ found in localized string.');
-          return {val<script src="script.js"></script>
-ue: p.replace(/\$\$/g, '$'), arg: null};
+          return {value: p.replace(/\$\$/g, '$'), arg: null};
         }
 
         // Otherwise, return the substitution value.
